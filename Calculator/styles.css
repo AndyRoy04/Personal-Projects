@@ -1,0 +1,61 @@
+body{
+    font-family: 'Lobster', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #222222;
+}
+h1{
+    text-align: right;
+    font-weight: lighter;
+    height: 75px;
+    width: 510px;
+    padding: 0px 0px 0px 12px;
+    margin: 0;
+    font-size: 20px;
+    color: aliceblue;
+    background-color:#31313179;
+    border-radius: 4px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 130px 130px 130px 130px;
+    width: 520px;
+    height: 381px;
+    gap: 1px;
+    padding: 5px ;
+    border-radius: 5px;
+}
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    width: 130px;
+    height: 50px;
+    color: aliceblue;
+    background-color: #313131;
+}
+button:hover{
+    background-color: #313131;
+}
+.b1{
+    grid-column: span 4;
+}
+.c2, .c3, .c4, .c5, .c9, .c13, .c17, .c21{
+    background-color: #31313121;
+}
+.b22, .b23{
+    grid-column: span 2;
+}
+.c22, .c23{
+    width: 260px;
+}
+.unique{
+    background-color: rgba(254, 134, 174, 0.508);
+}
+.unique:hover{
+    background-color: rgba(254, 63, 181, 0.667);
+}
+
