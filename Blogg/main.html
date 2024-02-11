@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogIt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h4 class="navbar-title">Blog<strong>It</strong></h4>
+        <ul class="navbar-menu">
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/create"><i class="fas fa-plus"></i> Create</a></li>
+          <li><a href="/update"><i class="fas fa-edit"></i> Update</a></li>
+          <li><a href="/delete"><i class="fas fa-trash-alt"></i> Delete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <h1>Welcome to <strong class="strong">BlogIt</strong></h1>
+        <p>Your Blogs shall enter here.</p>
+      </div>
+
+      <div class="content">
+        <h1>Welcome to <strong class="strong">BlogIt Create</strong></h1>
+        <p>Create your Blog Below.</p>
+            <form action="/create" method="post">
+                <input type="text" class="create" name="create" placeholder="Enter blog title" required>
+                <textarea type="me" class="create" name="blogCreate" placeholder="Enter blog" required></textarea>
+                <input type="submit" class="create blogSubmit new" value="Create Blog">
+            </form>  
+      </div>
+
+      <div class="content">
+        <h1>Welcome to <strong class="strong">BlogIt Update</strong></h1>
+        <p>Update your Blog Below.</p>
+        <form action="/update" method="post">
+            <input type="text" class="create" name="create" placeholder="Enter blog title to Update" required>
+            <input type="text" class="create" name="create" placeholder="Enter New blog title" required>
+                <textarea type="me" class="create" name="blogCreate" placeholder="Enter blog" required></textarea>
+            <input type="submit" class="create blogSubmit update" value="Create Blog">
+        </form>
+      </div>
+
+      <div class="content">
+        <h1>Welcome to <strong class="strong">BlogIt Delete</strong></h1>
+        <p>Delete your Blog Below.</p>
+        <form action="/update" method="post">
+            <input type="text" class="create" name="create" placeholder="Enter blog title to Delete" required>
+            <input type="submit" class="create blogSubmit delete" value="Create Blog">
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+          <p>
+            <a href="https://twitter.com/Andersonroy1234"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/djeutio-anderson-roy-958b0b234/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:djeutio1234@gmail.com"
+              ><i class="far fa-envelope"></i
+            ></a>
+            <a href="https://github.com/AndyRoy04"
+              ><i class="fab fa-github"></i
+            ></a>
+          </p>        
+        </div>
+        <p>Made by Andy </p>
+        <p>Copyright © authorised</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  </body>
+</html>
