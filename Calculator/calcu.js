@@ -32,22 +32,110 @@ function modulo(numb1, numb2) {
     return answer;
 }
 
+const result = document.getElementsByClassName('result');
+
+setTimeout(function() {
+    document.getElementsByClassName('slash').innerHTML = '|';
+  }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const operators = ["1/x", "x²", "✓x", "/", "*", "-", "+", "±", ".", "%", "AC", "="];
 var Clicked = [];
 $("button").click(function () {
-    var buttonClicked = $(this).text();
-    Clicked.push(buttonClicked);
+    // var buttonClicked = $(this).text();
+    // Clicked.push(buttonClicked);
 
-    const listString = Clicked.join('');
-    var numb1 = Number(listString);
+    // const listString = Clicked.join('');
+    // var numb1 = Number(listString);
 
-    if(numb1 === NaN){
-        var sign = buttonClicked;
-        Clicked.pop();
-        $("h1").text(sign);
-    }else{
-        $("h1").text(numb1)
-    }
+    // if(numb1 === NaN){
+    //     var sign = buttonClicked;
+    //     Clicked.pop();
+    //     $("h1").text(sign);
+    // }else{
+    //     $("h1").text(numb1)
+    // }
 
     // for (var i = 0; i < (operators.length-1); i++){
     //     if (buttonClicked === operators[i]){
