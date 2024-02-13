@@ -47,13 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
         number1 += characters;
         Display(number1);
     }
+    function append2(characters) {
+        number2 += characters;
+        Display(number2);
+    }
 
     function clear() {
-        let number1 = '';
-        let number2 = '';
-        let operand = '';
-        let resultDisplay = false;
-        Display('');
+        number1 = '';
+        number2 = '';
+        operand = '';
+        resultDisplay = false;
+        Display('|');
     }
 
     function calculate() {
@@ -79,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 result = modulo(Number(number1), Number(number2));
             }
         }
+        Display(result);
+        number1 = result;
+        resultDisplay = true;
     }
 
     document.querySelectorAll('.number').forEach(function (button){
@@ -87,87 +94,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })
 
-
-
-    // });
-
-
-    $('.result').click(function () {
-        var result = $(this).text();
-        $("h1").text(result);
+    document.querySelectorAll('.operator').forEach(function (button){
+        button.addEventListener('click', function(){
+            operand = button.textContent;
+            if (operand === 'x²' || operand === '✓x' || operand === '1/x') {
+                calculate();
+            }else{
+                // document.querySelectorAll('.number').forEach(function (button){
+                //     button.addEventListener('click', function(){
+                //         append2(button.textContent);
+                //     });
+                calculate();
+            }
+            // if (!resultDisplay){
+            //     if (number1 !== '') {
+            //         if (operand !== '') {
+            //             calculate();
+            //         } else {
+            //             numeber2 = number1;
+            //         }
+            //     }
+            // }
+            // operand = button.textContent;
+            // number1 = '';
+        });
     })
 
-    $('.operator').click(function () {
-        var operand = $(this).text();
-        $("h1").text(operand);
-        console.log($('operator'))
-    })
+    document.querySelector('.result').addEventListener('click', function(){
+        if (number1 !== '' && operand !== '') {
+            calculate();
+        }
+    });
 
-
-    // Clicked.push(buttonClicked);
-
-    // const listString = Clicked.join('');
-    // var numb1 = Number(listString);
-
-    // if(numb1 === NaN){
-    //     var sign = buttonClicked;
-    //     Clicked.pop();
-    //     $("h1").text(sign);
-    // }else{
-    //     $("h1").text(numb1)
-    // }
-
-    // for (var i = 0; i < (operators.length-1); i++){
-    //     if (buttonClicked === operators[i]){
-    //         Clicked.pop();
-    //         $("h1").text("|iiii");
-    //         operation(buttonClicked, numb1)
-    //         console.log(numb1)
-    //     }
-    // }
-
-
-
-    // function operation(value, numb1) {
-    //     switch (value) {
-    //         case "1/x":
-    //             $("h1").text(oneX(numb1));
-    //             break;
-    //         case "x²":
-    //             $("h1").text(xSquared(numb1));
-    //             break;
-    //         case "✓x":
-    //             $("h1").text(squareRoot(numb1));
-    //             break;
-    //         case "/":
-    //             $("h1").text(division(numb1));
-    //             break;
-    //         case "*":
-    //             $("h1").text(multiplication(numb1));
-    //             break;
-    //         case "-":
-    //             $("h1").text(subtraction(numb1));
-    //             break;
-    //         case "+":
-    //             $("h1").text(addition(numb1));
-    //             break;
-    //         case "%":
-    //             $("h1").text(modulo(numb1));
-    //             break;
-    //         case "±":
-    //             // $("h1").text((numb1));
-    //             break;
-    //         case "AC":
-    //             // $("h1").text(oneX(numb1));
-    //             break;
-    //         case "=":
-    //             // $("h1").text(xSquared(numb1));
-    //             break;
-
-
-    //         default:
-    //             break;
-    //     }
-    // }
-
+    document.querySelector('.c22').addEventListener('click', clear);
 })
