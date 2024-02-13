@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let result;
         if (operand !== '' && number1 !== '') {
             if (operand === 'x²') {
-                result = xSquared(Number(number1));
+                result = xSquared((number1));
             } else if (operand === '✓x') {
                 result = squareRoot(Number(number1));
             } else if (operand === '1/x') {
@@ -81,17 +81,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    document.querySelectorAll('.number').forEach(function (button){
+        button.addEventListener('click', function(){
+            append(button.textContent);
+        });
+    })
 
 
 
-    $(".number").click(function () {
-        var buttonClicked = $(this).text();
-        number1 += buttonClicked;
-        $("h1").text(parseFloat(number1));
-
-
-
-    });
+    // });
 
 
     $('.result').click(function () {
