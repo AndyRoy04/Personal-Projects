@@ -62,7 +62,7 @@ buttons.forEach((button) => {
             if (firstNumber !== '') {
                 operator = value;
             }
-        } else if (value === '1/x' || value === 'x²' || value === '✓x') {
+        } else if (value === '1/x' || value === 'x²' || value === '✓x' || value === '±') {
             if (firstNumber !== '') {
                 operator = value;
                 firstNumber = Number(firstNumber);
@@ -76,6 +76,9 @@ buttons.forEach((button) => {
                         break;
                     case '✓x':
                         result = squareRoot(firstNumber);
+                        break;
+                    case '±':
+                        result = firstNumber * -1;
                         break;
                     default:
                         break;
