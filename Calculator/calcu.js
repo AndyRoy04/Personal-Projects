@@ -81,7 +81,7 @@ buttons.forEach((button) => {
                         break;
                 }
                 output.innerHTML = result;
-                firstNumber = '';
+                firstNumber = result;
             }
         } else if (value === '=') {
             if (operator !== '=' && secondNumber !== '') {
@@ -108,7 +108,7 @@ buttons.forEach((button) => {
                 }
 
                 output.innerHTML = result;
-                firstNumber = '';
+                firstNumber = result;
                 secondNumber = '';
                 operator = '';
             } else if (operator === '=' && firstNumber !== '' && secondNumber === '') {
