@@ -57,12 +57,33 @@ buttons.forEach((button) => {
                 secondNumber += value;
                 output.innerHTML = secondNumber;
             }
-        } else if (value === '/' || value === '*' || value === '-' || value === '+' || value === '%') {
-            // output.innerHTML = value;
+        } else if (value === '÷' || value === '*' || value === '-' || value === '+' || value === '%') {
+            output.innerHTML = value;
             if (firstNumber !== '') {
                 operator = value;
             }
-        } else if (value === '=') {            
+        } else if (value === '1/x' || value === 'x²' || value === '✓x') {
+            if (firstNumber !== '') {
+                operator = value;
+                firstNumber = Number(firstNumber);
+
+                switch (operator) {
+                    case '1/x':
+                        result = oneX(firstNumber);
+                        break;
+                    case 'x²':
+                        result = xSquared(firstNumber);
+                        break;
+                    case '✓x':
+                        result = squareRoot(firstNumber);
+                        break;
+                    default:
+                        break;
+                }
+                output.innerHTML = result;
+                firstNumber = '';
+            }
+        } else if (value === '=') {
             if (operator !== '=' && secondNumber !== '') {
                 firstNumber = Number(firstNumber);
                 secondNumber = Number(secondNumber);
@@ -80,7 +101,7 @@ buttons.forEach((button) => {
                     case '%':
                         result = modulo(firstNumber, secondNumber);
                         break;
-                    case '/':
+                    case '÷':
                         result = division(firstNumber, secondNumber);
                     default:
                         break;
