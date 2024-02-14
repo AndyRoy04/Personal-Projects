@@ -78,7 +78,8 @@ buttons.forEach((button) => {
                         result = squareRoot(firstNumber);
                         break;
                     case '±':
-                        result = firstNumber * -1;
+                        firstNumber *= -1;
+                        result = firstNumber;
                         break;
                     default:
                         break;
