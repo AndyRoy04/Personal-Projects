@@ -35,6 +35,7 @@ function clear() {
     firstNumber = '';
     secondNumber = '';
     operator = '';
+    output.innerHTML = '';
 }
 
 // document.addEventListener('DOMContentLoaded', function () {
@@ -114,7 +115,7 @@ function clear() {
 
 //     document.querySelector('.c22').addEventListener('click', clear);
 // })
-const buttons = document.querySelectorAll('.number');
+const buttons = document.querySelectorAll('button');
 const output = document.getElementById('output');
 
 let firstNumber = '';
@@ -125,9 +126,51 @@ buttons.forEach((button) => {
     button.addEventListener('click', ()=>{
         const value = button.innerHTML;
         
-        if(!isNaN(value) || value ==='.'){
-            firstNumber += value;
-            output.innerHTML = firstNumber;
-        }
+        if(value >= 0 && value <= 9 || value ==='.'){
+            if(operator === ''){
+                firstNumber += value;
+                output.innerHTML = firstNumber;
+            }else{
+                secondNumber += value;
+                output.innerHTML = secondNumber;
+            }
+        // }else if(value === '/' || value === '*' || value === '-' || value === '+' || value === '%'){
+        //     // output.innerHTML = value;
+        //     if(firstNumber !== ''){
+        //         operator = value;
+        //         secondNumber = '';             
+        //     }
+        // }else if(value === '='){
+        //     if (operator !== '=' || secondNumber !== '') {
+        //         firstNumber = Number(firstNumber);
+        //         secondNumber = Number(secondNumber);
+        //         let result = 0;
+
+        //         switch (operator) {
+        //             case '+':
+        //                 result = addition(firstNumber, secondNumber);
+        //                 break;
+        //             case '-':
+        //                 result = subtraction(firstNumber, secondNumber);
+        //                 break;
+        //             case '*':
+        //                 result = multiplication(firstNumber, secondNumber);
+        //                 break;
+        //             case '%':
+        //                 result = modulo(firstNumber, secondNumber);
+        //                 break;
+        //             case '/':                        
+        //                 result = division(firstNumber, secondNumber);
+        //             default:
+        //                 break;
+        //         }
+
+        //         output.innerHTML = result;
+        //         firstNumber = result;
+        //         secondNumber = '';
+        //     }
+        // }else if(value === 'AC'){
+        //     clear;
+        // }
     });
 });
