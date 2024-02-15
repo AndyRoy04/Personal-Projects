@@ -41,7 +41,7 @@ function clear() {
 const buttons = document.querySelectorAll('button');
 const output = document.getElementById('output');
 
-const singles = ['1/x', 'x²', '✓x']
+const singles = ['1/x', 'x²', '✓x', 'x!', 'log', 'ln', 'sin', 'cos', 'tan'];
 const doubles = ['÷', '*', '-', '+', '%'];
 let firstNumber = '';
 let secondNumber = '';
@@ -65,13 +65,13 @@ buttons.forEach((button) => {
             if (firstNumber !== '') {
                 operator = value;
             }
-        }else if(value === '±'){
-            if (firstNumber !=='' && secondNumber !== ''){
+        } else if (value === '±') {
+            if (firstNumber !== '' && secondNumber !== '') {
                 secondNumber = secondNumber * -1;
                 output.innerHTML = secondNumber;
-            }else{
+            } else {
                 firstNumber = firstNumber * -1;
-                output.innerHTML = firstNumber;                
+                output.innerHTML = firstNumber;
             }
         } else if (singles.includes(value)) {
             if (firstNumber !== '') {
@@ -87,6 +87,15 @@ buttons.forEach((button) => {
                         break;
                     case '✓x':
                         result = squareRoot(firstNumber);
+                        break;
+                    case 'sin':
+                        result = Math.sin(firstNumber);
+                        break;
+                    case 'cos':
+                        result = Math.cos(firstNumber);
+                        break;
+                    case 'tan':
+                        result = Math.tan(firstNumber);
                         break;
                     default:
                         break;
