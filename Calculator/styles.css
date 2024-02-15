@@ -11,8 +11,8 @@ body{
 h1{
     text-align: right;
     font-weight: lighter;
-    height: 75px;
-    width: 510px;
+    height: 100px;
+    width: 488px;
     padding: 0px 0px 0px 12px;
     margin: 0;
     font-size: 20px;
@@ -22,17 +22,17 @@ h1{
 }
 .container{
     display: grid;
-    grid-template-columns: 130px 130px 130px 130px;
-    width: 520px;
+    grid-template-columns: (5, 100px) repeat;
+    width: 500px;
     height: 381px;
-    gap: 1px;
+    /* gap: 1px; */
     padding: 5px ;
     border-radius: 5px;
 }
 button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
-    width: 130px;
+    font-size: 17.5px;
+    width: 100px;
     height: 50px;
     color: aliceblue;
     background-color: #313131;
@@ -41,17 +41,17 @@ button:hover{
     background-color: #313131;
 }
 .b1{
-    grid-column: span 4;
+    grid-column: span 5;
 }
 .c2, .c3, .c4, .c5, .c9, .c13, .c17, .c21{
     background-color: #31313121;
 }
-.b22, .b23{
+/* .b22, .b23{
     grid-column: span 2;
 }
 .c22, .c23{
     width: 260px;
-}
+} */
 .unique{
     background-color: rgba(254, 134, 174, 0.508);
 }

@@ -1,18 +1,19 @@
 
-function oneX(numb1) {
+function inverse(numb1) {
     answer = 1 / numb1;
-    return Number(answer.toFixed(2));
+    return Number(answer);
 }
 function xSquared(numb1) {
-    answer = numb1 * numb1;
+    answer = Math.pow(numb1, 2);
     return answer;
 }
 function squareRoot(numb1) {
     answer = Math.sqrt(numb1);
-    return Number(answer.toFixed(2));
+    return Number(answer);
 }
 function division(numb1, numb2) {
     answer = numb1 / numb2;
+    // return Number(answer.toFixed(2));
     return Number(answer.toFixed(2));
 }
 function multiplication(numb1, numb2) {
@@ -40,6 +41,8 @@ function clear() {
 const buttons = document.querySelectorAll('button');
 const output = document.getElementById('output');
 
+const singles = ['1/x', 'x²', '✓x']
+const doubles = ['÷', '*', '-', '+', '%'];
 let firstNumber = '';
 let secondNumber = '';
 let operator = '';
@@ -57,7 +60,7 @@ buttons.forEach((button) => {
                 secondNumber += value;
                 output.innerHTML = secondNumber;
             }
-        } else if (value === '÷' || value === '*' || value === '-' || value === '+' || value === '%') {
+        } else if (doubles.includes(value)) {
             output.innerHTML = value;
             if (firstNumber !== '') {
                 operator = value;
@@ -70,14 +73,14 @@ buttons.forEach((button) => {
                 firstNumber = firstNumber * -1;
                 output.innerHTML = firstNumber;                
             }
-        } else if (value === '1/x' || value === 'x²' || value === '✓x') {
+        } else if (singles.includes(value)) {
             if (firstNumber !== '') {
                 operator = value;
                 firstNumber = Number(firstNumber);
 
                 switch (operator) {
                     case '1/x':
-                        result = oneX(firstNumber);
+                        result = inverse(firstNumber);
                         break;
                     case 'x²':
                         result = xSquared(firstNumber);
