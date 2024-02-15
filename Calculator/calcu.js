@@ -42,7 +42,7 @@ const buttons = document.querySelectorAll('button');
 const output = document.getElementById('output');
 
 const singles = ['1/x', 'x²', '✓x', 'x!', 'log', 'ln', 'sin', 'cos', 'tan'];
-const doubles = ['÷', '*', '-', '+', '%'];
+const doubles = ['÷', '*', '-', '+', '%', '^', 'exp'];
 let firstNumber = '';
 let secondNumber = '';
 let operator = '';
@@ -97,6 +97,22 @@ buttons.forEach((button) => {
                     case 'tan':
                         result = Math.tan(firstNumber);
                         break;
+                    case 'x!':
+                        if(firstNumber === 0){
+                            result = 1;
+                        }else{
+                            for(let i = (firstNumber - 1); i >= 1; i--) {
+                                firstNumber *= i;
+                            }
+                            result = firstNumber;
+                        }
+                        break;
+                    case 'log':
+                        result = Math.log(firstNumber);
+                        break;
+                    case 'ln':
+                        // Not implemented yet
+                        break;
                     default:
                         break;
                 }
@@ -123,6 +139,13 @@ buttons.forEach((button) => {
                         break;
                     case '÷':
                         result = division(firstNumber, secondNumber);
+                        break;
+                    case '^':
+                        result = Math.pow(firstNumber, secondNumber);
+                        break;
+                    case 'exp':
+                        result = firstNumber * Math.pow(10, secondNumber);
+                        break;
                     default:
                         break;
                 }
@@ -142,3 +165,4 @@ buttons.forEach((button) => {
         }
     });
 });
+
