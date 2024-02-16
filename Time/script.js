@@ -1,3 +1,6 @@
+const body = document.querySelector('body');
+const strong = document.querySelector('strong');
+const lastParagraph = document.querySelector('.second'); 
 
 // setInterval Permits the clock to run infinitely
 setInterval(() => {
@@ -18,9 +21,17 @@ setInterval(() => {
     }
 
     time.innerHTML = hour + ":" + minute + ":" + second;
-    document.querySelector('strong').innerHTML = second;
+    strong.innerHTML = hour;
+
+    if (hour >= 6 && hour < 18) {
+        body.classList.remove('dark')
+        lastParagraph.innerHTML = " Day Light"
+    } else {
+        body.classList.add('dark')
+        lastParagraph.innerHTML = " Dark Time"
+    }
+
+    
+
 });
 
-// setTimeout(function(){
-//    body.classList.add('dark')
-// }, 2000)
