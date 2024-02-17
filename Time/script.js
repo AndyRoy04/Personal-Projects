@@ -37,7 +37,8 @@ setInterval(() => {
     }
 
     if (hour >= 6 && hour < 18) {
-                body.classList.remove('dark')
+        body.classList.remove('dark')
+        svg.classList.add('sun')
         lastParagraph.innerHTML = "Day Light"
         svg.innerHTML = '<i class="bi bi-brightness-high-fill"></i>'
     } else {
