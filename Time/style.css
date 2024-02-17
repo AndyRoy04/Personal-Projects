@@ -21,7 +21,7 @@ body{
     font-size: 2em;
 }
 h1{
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 h2{
     padding-top: 20px;
@@ -30,15 +30,19 @@ h2{
 strong{
     color: #7b14dd;
 }
-
+i{
+    font-size: 80px;
+}
+.grey{
+    color: #4e4a4a;
+}
 .dark{
     background-color: #070a1e;
     color: antiquewhite;
     font-size: 8px;
     font-weight: bold;
-    transition: 3s;
+    transition: 4s linear all;
 }
-
 .last{
     padding-top: 200px;
     margin: 0;
