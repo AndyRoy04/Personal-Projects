@@ -32,18 +32,15 @@ setInterval(() => {
     } else if(hour >= 10 && hour < 22){
         text.innerHTML = "It's time to Work 💻"
     }
-    else{
-        text.innerHTML = 'wcdedwec'
-    }
 
     if (hour >= 6 && hour < 18) {
         body.classList.remove('dark')
         svg.classList.add('sun')
-        lastParagraph.innerHTML = "Day Light"
+        lastParagraph.innerHTML = "Day Light."
         svg.innerHTML = '<i class="bi bi-brightness-high-fill"></i>'
     } else {
         body.classList.add('dark')
-        lastParagraph.innerHTML = "Dark theme"
+        lastParagraph.innerHTML = "Dark theme."
         svg.classList.add('grey')
         svg.innerHTML = '<i class="bi bi-moon-stars-fill"></i>'
     }
