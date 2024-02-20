@@ -1,26 +1,28 @@
-
-// setInterval(() => {
-//     let date = new Date();
-//     let hour = date.getHours();
-//     let minute = date.getMinutes();
-//     let second = date.getSeconds();
-
-//     if(second < 30) {
-//         setTimeout(() => {
-//             let audio = new Audio("./sounds/Jujutsu_Kaisen_AMV_《ANIMALS》(128k).mp3")
-//             audio.play();
-//         }, 5000);
-//     }
-// })
-
 const form = document.getElementById("myForm");
+const dateInput = document.getElementById("dateInput").value;
+const timeInput = document.getElementById("timeInput").value;
+const details = document.querySelector('h3')
 
-form.addEventListener('submit', () => {
+setInterval(() => {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
 
+    details.innerHTML = `${year}: ${month}`;
 
-    const dateInput = document.getElementById("dateInput").value;
-    const timeInput = document.getElementById("timeInput").value;
-    
-    const details = document.querySelector('h3')
-    details.innerHTML = `${dateInput} : ${timeInput}`;
-});
+})
+// document.getElementById('playsound').addEventListener('click', function(){
+//     playSound(10000);    
+// });
+
+// function playSound(time) {
+//     var audio = new Audio("./sounds/Karatenai(128k).mp3");
+//     audio.play();
+//     setTimeout(function() {
+//         audio.pause();
+//         audio.currentTime = 0;
+//     }, time);
+// }
