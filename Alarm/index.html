@@ -8,15 +8,18 @@
 </head>
 <body>
     <h1>Welcome to AlarmIt</h1>
-    <div>
-        <h2>Enter your Alarm Details below</h2>
+    <div class="container">
+        <p id="time"></p>
+        <p id="date"></p>
+    </div>
+    <div class="container">
+        <h3>Set Alarm Below</h3>
         <form action="" method="post" id="myForm">
-            <input type="date" id="dateInput" required>
             <input type="time" id="timeInput" required>
-            <input type="submit" value="Submit">
+            <input type="submit" value="SET">
         </form>
+        <br><button id="playsound">Play</button>
         <h3></h3>
-        <button id="playsound">Play</button>
     </div>
 
     <script src="script.js"></script>
