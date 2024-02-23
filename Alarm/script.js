@@ -35,9 +35,9 @@ setInterval(() => {
         let alarmMin = timeInput.slice(3, 5);
         
         details.innerHTML = `${alarmHour} and ${alarmMin}`;
-        if(alarmHour === hours && alarmMin === minutes){
-            playSound
-        }
+        // if(alarmHour === hours && alarmMin === minutes){
+        //     playSound
+        // }
     })
 })
 
