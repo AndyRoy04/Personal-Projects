@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #050c36;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding: 30px;
+}
+
+.main1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"]{
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: large;
+    margin: 20px;
+    border-radius: 3px;
+}
+input[type="search"]{
+    width: 315px;
+    height: 50px;
+    padding: 5px;
+    font-size: large;
+    margin: 20px;
+    border-radius: 3px;
+}
