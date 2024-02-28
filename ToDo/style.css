@@ -7,6 +7,7 @@ body{
     background-color: #050c36;
     color: #ffffff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
 }
 
 h1{
@@ -26,6 +27,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #434535;
 }
 
 input[type="text"]{
