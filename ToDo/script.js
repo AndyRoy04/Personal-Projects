@@ -11,10 +11,10 @@ add.addEventListener('click', function(){
         var taskText = document.createTextNode(description);
         var delButton = document.createElement('button');
         var trash = document.createElement('i');
-        // trash.classList.add('fas');
-        // trash.classList.add('fa-trash-alt');
-        // delButton.appendChild(trash);
-        // delButton.classList.add('delete-button');
+        trash.classList.add('fas');
+        trash.classList.add('fa-trash-alt');
+        delButton.appendChild(trash);
+        delButton.classList.add('delete-button');
 
         taskItem.appendChild(taskText);
         taskItem.appendChild(trash);
