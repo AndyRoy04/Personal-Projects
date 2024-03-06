@@ -55,6 +55,7 @@ h2{
 }
 .fas:hover{
     color: #ff0000;
+    font-size: larger;
 }
 .fa-edit{
     color: #14ba0eab;
@@ -70,7 +71,7 @@ input[type="text"]{
     font-size: large;
     margin: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 input[type="search"]{
     width: 315px;
@@ -79,7 +80,7 @@ input[type="search"]{
     font-size: large;
     margin: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 li{
@@ -94,4 +95,10 @@ li{
     border-radius: 5px;
     padding: 15px;
     margin-top: 3px;
+}
+
+.done{
+    text-decoration: line-through;
+    opacity: 0.3;
+    background-color: #0b6a07ac;
 }

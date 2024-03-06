@@ -41,9 +41,17 @@ search.addEventListener('click', function(e){
     toSearch.value = '';
 })
 
+// TODO: remove task
 post.addEventListener('click', function(e){
     if(e.target.classList.contains('fa-trash-alt')){
         var taskItem = e.target.parentNode;
         post.removeChild(taskItem);
+    }
+})
+// TODO: complete task
+post.addEventListener('click', function(e){
+    if(e.target.classList.contains('fa-edit')){
+        var taskItem = e.target.parentNode;
+        taskItem.classList.toggle('done');
     }
 })
