@@ -48,9 +48,12 @@ h2{
 } */
 
 .fas{
-    color: #f8164f;
+    color: #b107318c;
     cursor: pointer;
     float: right;
+}
+.fas:hover{
+    color: #ff0000;
 }
 
 input[type="text"]{

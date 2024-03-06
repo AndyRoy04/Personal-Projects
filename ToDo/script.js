@@ -9,12 +9,9 @@ add.addEventListener('click', function(){
     if(description !== ''){   
         var taskItem = document.createElement('li');
         var taskText = document.createTextNode(description);
-        var delButton = document.createElement('button');
         var trash = document.createElement('i');
         trash.classList.add('fas');
         trash.classList.add('fa-trash-alt');
-        delButton.appendChild(trash);
-        delButton.classList.add('delete-button');
 
         taskItem.appendChild(taskText);
         taskItem.appendChild(trash);
@@ -22,4 +19,11 @@ add.addEventListener('click', function(){
         toDo.value = '';
     }
 
+})
+
+post.addEventListener('click', function(e){
+    if(e.target.classList.contains('fa-trash-alt')){
+        var taskItem = e.target.parentNode;
+        post.removeChild(taskItem);
+    }
 })
