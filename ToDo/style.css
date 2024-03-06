@@ -51,9 +51,16 @@ h2{
     color: #b107318c;
     cursor: pointer;
     float: right;
+    padding: 5px;
 }
 .fas:hover{
     color: #ff0000;
+}
+.fa-edit{
+    color: #14ba0eab;
+}
+.fa-edit:hover{
+    color: #09ff00;
 }
 
 input[type="text"]{
@@ -71,6 +78,7 @@ input[type="search"]{
     padding: 5px;
     font-size: large;
     margin: 20px;
+    border: none;
     border-radius: 8px;
 }
 
