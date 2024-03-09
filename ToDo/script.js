@@ -4,10 +4,11 @@ const add = document.getElementById('add');
 const search = document.getElementById('search');
 const post = document.getElementById('post');
 
-// const toDoList = [];
+var toDoList = [];
 
 add.addEventListener('click', function(){
     var description = toDo.value.trim()
+    toDoList.push(description.toLowerCase());
     if(description !== ''){   
         var taskItem = document.createElement('li');
         var taskText = document.createTextNode(description);
@@ -28,15 +29,14 @@ add.addEventListener('click', function(){
 
 })
 
-search.addEventListener('click', function(e){
-    var searchDescription = toSearch.value.trim();
+search.addEventListener('click', function(){
+    var searchDescription = toSearch.value;
 
-    // To work on search property
+        if (toDoList.includes(searchDescription)) {
+            var item = target.parentNode;
+            item.style.color='red';
 
-    // if(e.target.value == searchDescription){
-    //     var taskItem = e.target.parentNode;
-    //     post.value.animate({opacity: 1}, {duration: 3000});
-    // }
+        }
 
     toSearch.value = '';
 })
