@@ -3,12 +3,13 @@ const toSearch = document.getElementById('toSearch');
 const add = document.getElementById('add');
 const search = document.getElementById('search');
 const post = document.getElementById('post');
+const h2 = document.getElementsByTagName('h2')[0];
 
-var toDoList = [];
+var toDoList = ['a.a'];
 
 add.addEventListener('click', function(){
-    var description = toDo.value.trim()
-    toDoList.push(description.toLowerCase());
+    var description = toDo.value.trim().toUpperCase();
+    toDoList.push(description.toUpperCase());
     if(description !== ''){   
         var taskItem = document.createElement('li');
         var taskText = document.createTextNode(description);
@@ -23,6 +24,7 @@ add.addEventListener('click', function(){
         taskItem.appendChild(trash);
         taskItem.appendChild(done);
         post.appendChild(taskItem);
+        h2.innerHTML = `${toDoList[toDoList.length - 1]}`;
 
         toDo.value = '';
     }
@@ -31,10 +33,9 @@ add.addEventListener('click', function(){
 
 search.addEventListener('click', function(){
     var searchDescription = toSearch.value;
+    
 
         if (toDoList.includes(searchDescription)) {
-            var item = target.parentNode;
-            item.style.color='red';
 
         }
 
@@ -46,6 +47,10 @@ post.addEventListener('click', function(e){
     if(e.target.classList.contains('fa-trash-alt')){
         var taskItem = e.target.parentNode;
         post.removeChild(taskItem);
+        if(toDoList.includes(taskItem)){
+            let index = toDoList.indexOf(taskItem);
+            toDoList.pop(toDoList[index]);
+        }
     }
 })
 // TODO: complete task

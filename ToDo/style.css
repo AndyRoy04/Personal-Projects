@@ -19,10 +19,14 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* background-color: #784008; */
-    background: linear-gradient(rgba(255, 166, 0, 0.484), rgba(228, 112, 10, 0.592), rgba(255, 166, 0, 0.484), 130%, transparent);
-    height: 575px;
+    background: linear-gradient(to right, rgba(255, 166, 0, 0.484), rgba(228, 112, 10, 0.592), 160%, transparent);
+    height: auto;
     border-radius: 10px;
     margin: 5px 40px;
+}
+
+.main1{
+    position: relative;
 }
 
 .main1, .main2{
@@ -30,7 +34,10 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* box-shadow: inset 5px 1px 10px 10px rgba(248, 12, 0, 0.2); */
+    margin-bottom: 20px;
 }
+
 
 h2{
     text-align: center;
